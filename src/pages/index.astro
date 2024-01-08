@@ -1,5 +1,6 @@
 ---
-
+import Nav from '../components/Nav.astro'
+import ConstructionImage from '../assets/construction.jpg'
 ---
 
 <html lang="en">
@@ -11,6 +12,11 @@
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<Nav></Nav>
+		<div class="text-center mt-[150px] lg:mt-[250px] mb-[150px]">
+			<h1 class="text-6xl md:text-8xl">Our first project, Coming Soon...</h1>
+		</div>
+		
+		<img src={ConstructionImage.src} alt="construction site" />
 	</body>
 </html>
