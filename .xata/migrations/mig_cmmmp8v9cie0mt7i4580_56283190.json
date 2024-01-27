@@ -1,0 +1,16 @@
+{
+  "id": "mig_cmmmp8v9cie0mt7i4580",
+  "parentID": "mig_cmmmp5v9cie0mt7i4570",
+  "checksum": "1:562831901846f9cba94dbd57af8f5ea360d265397f4501fa8f2377a958c4b3b5",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "Phone",
+          "type": "string"
+        },
+        "table": "Message"
+      }
+    }
+  ]
+}

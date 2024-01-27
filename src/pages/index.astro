@@ -1,22 +1,11 @@
 ---
 import Nav from '../components/Nav.astro'
 import ConstructionImage from '../assets/new-home-construction.jpg'
+import Layout from '../layouts/layout.astro'
+import Hero from '../components/Hero.astro'
 ---
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>FirstDevelopments.ca</title>
-	</head>
-	<body>
-		<Nav></Nav>
-		<div class="text-center mt-[150px] lg:mt-[250px] mb-[150px]">
-			<h1 class="text-6xl md:text-8xl">Our first project, Coming Soon...</h1>
-		</div>
-		
-		<img src={ConstructionImage.src} alt="construction site" />
-	</body>
-</html>
+<Layout title="Welcome to firstdevelopments">
+	<div class="w-full mx-auto">
+		<Hero></Hero>
+	</div>
+</Layout>

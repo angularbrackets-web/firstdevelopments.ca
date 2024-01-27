@@ -1,0 +1,18 @@
+{
+  "id": "mig_cmmmpi79cie0mt7i4590",
+  "parentID": "mig_cmmmp8v9cie0mt7i4580",
+  "checksum": "1:0fb3e7124fc5eb5922befb9ca1f075c74b19686eb2c97f09b9bd33461631946b",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "Message",
+          "type": "text",
+          "notNull": true,
+          "defaultValue": "test"
+        },
+        "table": "Message"
+      }
+    }
+  ]
+}

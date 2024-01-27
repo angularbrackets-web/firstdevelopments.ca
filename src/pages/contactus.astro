@@ -1,0 +1,101 @@
+---
+import ConstructionImage from '../assets/new-home-construction.jpg'
+import Layout from '../layouts/layout.astro'
+import Hero from '../components/Hero.astro'
+
+
+---
+<Layout title="Firstdevelopments - Contact us">
+	<div class="container mt-[200px]">
+		<form id="add-contact-form" class="w-full mx-auto max-w-lg">
+            <div class="flex flex-wrap -mx-3 mb-6">
+                <div class="w-full px-3">
+                    <label class="block uppercase tracking-wide text-xs font-bold mb-2" for="contact-name">
+                        Name
+                    </label>
+                    <input class="appearance-none block w-full bg-gray-300 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="contact-name" maxlength="50" required />
+                </div>
+            </div>
+            <div class="flex flex-wrap -mx-3 mb-6">
+                <div class="w-full px-3">
+                    <label class="block uppercase tracking-wide text-xs font-bold mb-2" for="contact-phone">
+                        Phone
+                    </label>
+                    <input class="appearance-none block w-full bg-gray-300 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name="contact-phone" id="contact-phone" maxlength="12" required />
+                </div>
+            </div>
+            <div class="flex flex-wrap -mx-3 mb-6">
+                <div class="w-full px-3">
+                    <label class="block uppercase tracking-wide text-xs font-bold mb-2" for="contact-email">
+                        Email
+                    </label>
+                    <input type="email" class="appearance-none block w-full bg-gray-300 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name="contact-email" id="contact-email" maxlength="50" required />
+                </div>
+            </div>
+            <div class="flex flex-wrap -mx-3 mb-6">
+                <div class="w-full px-3">
+                    <label class="block uppercase tracking-wide text-xs font-bold mb-2" for="contact-message">
+                        Message
+                    </label>
+                    <textarea class="appearance-none block w-full bg-gray-300 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name="contact-message" id="contact-message" maxlength="1000" required />
+                </div>
+            </div>
+            <button type="submit" class="bg-emerald-500 hover:bg-emerald-700 text-white text-lg font-bold py-4 px-10 rounded" id="btn-submit-contact">Submit</button>
+            
+
+            <div class="h-[50px] py-5">
+                <div class="alert-div-contact hidden min-w-[20rem] text-center p-3 rounded-xl border-4">
+                    
+                </div>
+            </div>
+        </form>
+	</div>
+</Layout>
+
+<script>
+    
+import type { Message, MessageRecord } from "../xata"
+import type {EmailJsMessage} from "../pages/api/xataApi"
+import {insertContact} from "../pages/api/xataApi"
+import {showNotification} from "../components/Alert"
+
+    const btnSubmitAddContact = document.querySelector("#btn-submit-contact") as HTMLButtonElement
+    const addContactForm = document.querySelector("#add-contact-form") as HTMLFormElement
+    
+    //contactPhoneTextBox.addEventListener('onkeypress', event =>  onlyNumberKey(event))
+
+    // function onlyNumberKey(evt: Event): boolean {
+    //     console.log('......', JSON.stringify(evt))
+    //     // Only ASCII character in that range allowed
+    //     // let ASCIICode = (evt.which) ? evt.which : evt.keyCode;
+    //     // if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57)) {
+    //     //     return false;
+    //     // }
+    //     return true;
+    // }
+
+    addContactForm?.addEventListener("submit", async event => {
+        event.preventDefault()
+
+        const contactNameTextBox = document.querySelector("#contact-name") as HTMLInputElement
+        const contactPhoneTextBox = document.querySelector("#contact-phone") as HTMLInputElement
+        const contactEmailTextBox = document.querySelector("#contact-email") as HTMLInputElement
+        const contactMessageTextBox = document.querySelector("#contact-message") as HTMLInputElement
+        const contactName = contactNameTextBox.value
+        const contactPhone = contactPhoneTextBox.value
+        const contactEmail = contactEmailTextBox.value
+        const contactMessage = contactMessageTextBox.value
+
+        let newContact: EmailJsMessage = {
+            Name : contactName,
+            Email : contactEmail!,
+            Phone : contactPhone!,
+            Message : contactMessage
+        }
+
+        await insertContact(newContact)
+        addContactForm.reset()
+        showNotification('success', 'Thank you for registering to contact.', 'alert-div-contact')
+    })
+
+</script>

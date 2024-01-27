@@ -4,15 +4,70 @@ import firstDevelopmentsLogo from '../assets/FirstDevelopmentsLogoV2.png'
 
 <nav class="bg-white text-sm md:text-md lg:text-lg xl:text-xl w-full fixed top-0 z-20 p-3 border-b border-gray-200">
     <div class='md:container mx-auto'>
+
+        <!-- Mobile -->
+        <div class='flex md:hidden'>
+            <div class="p-1 w-24 min-[375px]:w-36 min-[430px]:w-48 min-[475px]:w-[60%]">
+                <a href="/">
+                    <img class='w-12' src={firstDevelopmentsLogo.src} alt="First Group Logo" />
+                </a>
+            </div>
+            
+            <div class="block md:hidden p-1">
+                <div class="">
+                    <div class="bg-gray-950 text-gray-50 px-5 py-1 rounded-lg flex gap-5">
+                        <div class="mt-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+                            </svg>
+                        </div>
+                        
+                        <div> 1 (888) 340- 6003</div>
+                    </div>
+                    <div class="flex gap-2 mt-2">
+                        <div class="">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                              </svg>                          
+                        </div>
+                        <span>care@firstdevelopments.ca</span>
+                    </div>
+                </div>
+                
+            </div>     
+            
+            {/* Mobile Button */}
+            <div class='block md:hidden w-[10%]'>
+                <button class='mobile-menu-button'>
+                    
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mobile-icon w-10 h-10 block hover:text-green-500">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+                        </svg>
+                    
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width={1.5} stroke="currentColor" class="close-mobile-icon w-10 h-10 hidden text-red-500">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    
+                </button>
+            </div> 
+        </div>
+        <!-- Web -->
+
         <div class="flex items-center justify-between">
-            <div class='w-[10%]'>
+            <div class='hidden md:block w-[10%]'>
                 <div class="">
                     <a href="/">
-                        <img class='' src={firstDevelopmentsLogo.src} alt="First Group Logo" />
+                        <img class='w-12' src={firstDevelopmentsLogo.src} alt="First Group Logo" />
                     </a>
                 </div>
             </div>
-            <div>
+            <div class='hidden md:block'>
+                <div class="flex items-center transition duration-300 my-3 text-lg font-black">
+                    <div class="border-r border-sky-600 pr-3"><a href="/" class=' hover:text-sky-600'>Home</a></div>
+                    <div><a href="/contactus" class=' hover:text-sky-600 pl-3'>Contact Us</a></div>
+                </div>
+            </div>
+            <div class="hidden md:block">
                 <div class="bg-gray-950 text-gray-50 px-5 py-1 rounded-lg flex gap-5">
                     <div class="mt-1">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5">
@@ -22,8 +77,59 @@ import firstDevelopmentsLogo from '../assets/FirstDevelopmentsLogoV2.png'
                     
                     <div> 1 (888) 340- 6003</div>
                 </div>
+                <div class="flex gap-2 mt-2">
+                    <div class="">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                          </svg>                          
+                    </div>
+                    <span>care@firstdevelopments.ca</span>
+                </div>
             </div>
 
         </div>
     </div>
+
+
+     {/* Mobile Menu */}
+    
+     <div class='mobile-menu hidden text-lg flex bottom-0 left-0 w-full h-screen px-6 py-6 font-black'>
+        <div class='flex flex-col gap-8'>
+            <a href="/" class='block hover:text-sky-950'>Home</a>
+            <a href="/contactus" class='block hover:text-sky-950'>Contact Us</a>
+        </div>
+    </div>
 </nav>
+
+
+<script>
+    let mobileMenuButton = document.querySelector('button.mobile-menu-button')
+    mobileMenuButton?.addEventListener('click', () => {
+        toggleShowMobileMenu()
+    })
+    let mobileMenu = document.querySelector('div.mobile-menu')
+    let mobileIcon = document.querySelector('svg.mobile-icon')
+    let closeMobileIcon = document.querySelector('svg.close-mobile-icon')
+
+
+    let showMobileMenu = false
+    let toggleShowMobileMenu = () => {
+        showMobileMenu = !showMobileMenu
+        if(showMobileMenu){
+            mobileMenu?.classList.remove('hidden')
+            mobileMenu?.classList.add('block')
+            mobileIcon?.classList.remove('block')
+            mobileIcon?.classList.add('hidden')
+            closeMobileIcon?.classList.remove('hidden')
+            closeMobileIcon?.classList.add('block')
+        }
+        else{
+            mobileMenu?.classList.remove('block')
+            mobileMenu?.classList.add('hidden')
+            closeMobileIcon?.classList.remove('block')
+            closeMobileIcon?.classList.add('hidden')
+            mobileIcon?.classList.remove('hidden')
+            mobileIcon?.classList.add('block')
+        }
+    }
+    </script>

@@ -1,0 +1,18 @@
+{
+  "id": "mig_cmmmp0v9cie0mt7i4560",
+  "parentID": "mig_cmmmoav9cie0mt7i4550",
+  "checksum": "1:e07e4965cd7a9f408e0916f498c8b34d29fe12ed3dce823a43e34e6384a487e3",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "Name",
+          "type": "string",
+          "notNull": true,
+          "defaultValue": "test"
+        },
+        "table": "Message"
+      }
+    }
+  ]
+}

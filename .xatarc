@@ -1,0 +1,6 @@
+{
+  "databaseURL": "https://firstgroupdevelopments-s-workspace-q8rqgk.us-west-2.xata.sh/db/firstdevelopments",
+  "codegen": {
+    "output": "src/xata.ts"
+  }
+}

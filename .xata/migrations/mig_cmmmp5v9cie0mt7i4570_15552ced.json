@@ -1,0 +1,16 @@
+{
+  "id": "mig_cmmmp5v9cie0mt7i4570",
+  "parentID": "mig_cmmmp0v9cie0mt7i4560",
+  "checksum": "1:15552ced8c34d0d031233a9429ebcccdbf7b0e76ded5a3aa652aba1fb2659b91",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "Email",
+          "type": "email"
+        },
+        "table": "Message"
+      }
+    }
+  ]
+}
