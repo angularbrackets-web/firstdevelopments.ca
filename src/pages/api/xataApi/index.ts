@@ -26,7 +26,7 @@ export async function insertContact(messageRecord:EmailJsMessage){
     
     const emailParameters : EmailTemplateParameters = {
         sender : messageRecord.Email,
-        to : "firstgroupdevelopments@gmail.com",
+        to : "care@firstdevelopments.ca",
         subject : `Message from ${messageRecord.Name}`,
         message : `
         Name : ${messageRecord.Name}
